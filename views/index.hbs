@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}} <a name="" id="" class="btn btn-primary" href="/stock/add" role="button">Add Symbol</a></p>
+<div class="card-deck">
+  {{#each stocks}}
+  <div class="card">
+    <img class="card-img-top" src="/images/graficos.jpg" alt="{{this.symbol}}" style="width:max-content">
+    <div class="card-body">
+      <h4 class="card-title">{{this.symbol}}</h4>
+    </div>
+    <form action="/stock/{{this._id}}" method="post">
+      <a href="/stock/{{this.symbol}}" class="btn btn-primary">View Graph</a>
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,13 @@
+<form autocomplete="off" action="/stock" method="post">
+  <div class="form-group">
+    <label for="symbolId">Select a symbol</label>
+    <div class="autocomplete" style="width:300px;">
+      <input type="text" class="form-control" name="symbol" id="symbolId" placeholder="Put to search..">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">ADD</button>
+</form>
+<script>
+  let auto = document.getElementById("symbolId");
+  autocomplete(auto);
+</script>
